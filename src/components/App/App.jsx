@@ -39,9 +39,9 @@ function App() {
         <Route exact path='/'>
           <OrderPizza />
         </Route>
-        {/* <Route exact path='/customerInformation'>
+        <Route exact path='/customerInformation'>
           <CustomerInformationPage />
-        </Route> */}
+        </Route>
         {/* <Route exact path='/checkout'>
           <CheckoutPage />
         </Route> */}

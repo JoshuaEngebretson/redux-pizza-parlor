@@ -41,11 +41,10 @@ const shoppingCart = (state=[], action) => {
   return state;
 }
 
-const customerInformation = (state = [], action) => {
+const customerInformation = (state = '', action) => {
     if(action.type === 'ADD_CUSTOMER_INFORMATION'){
-     const newCustomer = action.payload;
-
-     return [...state, newCustomer];
+      const newCustomer = action.payload;
+      return newCustomer;
     }
     return state;
 }

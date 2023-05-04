@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from "react-router-dom";
 
 function CustomerInformationPage() {
@@ -10,6 +10,8 @@ function CustomerInformationPage() {
     const checkoutPage = () => {
         history.push("/checkout")
     }
+
+    const shoppingCart = useSelector(state => state.shoppingCart);
 
     const [nameInput, setNameInput] = useState('');
     const [addressInput, setAddressInput] = useState('');
@@ -31,7 +33,8 @@ function CustomerInformationPage() {
                 address: addressInput,
                 city: cityInput,
                 zip: zipInput,
-                type: pickupOption
+                type: pickupOption,
+                pizzas: shoppingCart
             }
         }).then((response) =>
 
@@ -68,6 +71,7 @@ function CustomerInformationPage() {
 
     return (
         <>
+        {/* <HeaderWithCart /> */}
             <h3>Step 2: Customer Information</h3>
             <form onSubmit={newCustomer}>
                 <input
