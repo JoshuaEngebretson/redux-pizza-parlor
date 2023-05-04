@@ -2,7 +2,7 @@ import './PizzaItem.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 
-function PizzaItem({pizza}) {
+function PizzaItem({ pizza }) {
 
   const [toggleRemove, setToggleRemove] = useState(false)
 
@@ -18,17 +18,17 @@ function PizzaItem({pizza}) {
 
   const addOrRemoveButton = () => {
     if (toggleRemove) {
-      return <button onClick={removeFromCart}>Remove</button>
-      
+      return <button className='pizza-button' onClick={removeFromCart}>Remove</button>
+
     }
     else {
-      return <button onClick={addToCart}>Add</button>
+      return <button className='pizza-button' onClick={addToCart}>Add</button>
     }
   }
 
   return (
     <div className="pizza-card">
-      <img src={pizza.image_path}  className='square'/>
+      <img src={pizza.image_path} className='pizza-image' />
       <h3 className="pizza-names">{pizza.name}</h3>
       <p className='small-text'>{pizza.description}</p>
       <h4 className='card-price'>{pizza.price}</h4>

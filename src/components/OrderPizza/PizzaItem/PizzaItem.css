@@ -6,19 +6,12 @@
   margin: 15px;
   height: 400px;
   width: 300px;
-  /* align-content: center; */
   background-color: white;
 }
 
-.square {
-  /* max-width: 200px; */
+.pizza-image {
   height: 150px;
   margin: auto;
-}
-
-.small-text {
-  font-size: small;
-  height: 125px;
 }
 
 .pizza-names {
@@ -26,6 +19,16 @@
   margin-bottom: 25px;
 }
 
+.small-text {
+  font-size: 15;
+  height: 75px;
+}
+
 .card-price {
   text-align: right;
+}
+
+.pizza-button {
+  width: 120%;
+  padding: 0px;
 }

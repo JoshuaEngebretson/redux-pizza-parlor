@@ -18,7 +18,7 @@ function App() {
     axios({
       method: 'GET',
       url: '/api/pizza'
-    }).then ((response) => {
+    }).then((response) => {
       const pizzaArray = response.data;
       dispatch({
         type: 'SET_PIZZA_REDUCER',
@@ -33,7 +33,6 @@ function App() {
         <h1 className='App-title'>Prime Pizza</h1>
       </header>
       {/* <img src='images/pizza_photo.png' /> */}
-      <p>Pizza is great.</p>
       <Router>
         <Route exact path='/'>
           <OrderPizza />
@@ -48,7 +47,7 @@ function App() {
           <AdminPage />
         </Route> */}
       </Router>
-  
+
     </div>
   );
 }
