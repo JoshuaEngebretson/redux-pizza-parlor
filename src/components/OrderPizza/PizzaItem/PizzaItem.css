@@ -4,19 +4,28 @@
   border-radius: 5%;
   padding: 20px;
   margin: 15px;
-  height: 350px;
-  width: 150px;
-  align-content: center;
+  height: 400px;
+  width: 300px;
+  /* align-content: center; */
   background-color: white;
 }
 
 .square {
-  max-width: 200px;
-  height: 100px;
-  text-align: center;
+  /* max-width: 200px; */
+  height: 150px;
   margin: auto;
 }
 
 .small-text {
   font-size: small;
+  height: 125px;
+}
+
+.pizza-names {
+  height: 30px;
+  margin-bottom: 25px;
+}
+
+.card-price {
+  text-align: right;
 }
