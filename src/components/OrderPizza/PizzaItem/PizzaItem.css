@@ -1,0 +1,22 @@
+.pizza-card {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 20px;
+  margin: 15px;
+  height: 350px;
+  width: 150px;
+  align-content: center;
+  background-color: white;
+}
+
+.square {
+  max-width: 200px;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+}
+
+.small-text {
+  font-size: small;
+}
