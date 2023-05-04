@@ -1,14 +1,15 @@
 # TODO
 
-- [ ] Order - Display all pizzas
+- [X] Order - Display all pizzas
   - located at '/'
-  - [ ] Order - Select Pizza
-    - [ ] Condintionally render add / remove button
-    - [ ] Add pizza to cart
-      - Add this to redux cart state
-    - [ ] Remove pizza from cart
-      - Remove this from redux cart state
-    - [ ] As pizzas added / removed keep running total in upper right
+
+- [ ] Order - Select Pizza
+  - [X] Condintionally render add / remove button
+  - [X] Add pizza to cart
+    - Add this to redux cart state
+  - [X] Remove pizza from cart
+    - Remove this from redux cart state
+  - [ ] As pizzas added / removed keep running total in upper right
 
 - [ ] Order - Enter Customer Information
   - located at '/customerInformation'

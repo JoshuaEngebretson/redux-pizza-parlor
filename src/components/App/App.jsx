@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import OrderPizza from '../OrderPizza/OrderPizza';
 import { useEffect } from 'react';
+import CustomerInformationPage from '../CustomerInformationPage/CustomerInformationPage';
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 
 function App() {
 
@@ -32,17 +34,16 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Prime Pizza</h1>
       </header>
-      {/* <img src='images/pizza_photo.png' /> */}
       <Router>
         <Route exact path='/'>
           <OrderPizza />
         </Route>
-        {/* <Route exact path='/customerInformation'>
+        <Route exact path='/customerInformation'>
           <CustomerInformationPage />
-        </Route> */}
-        {/* <Route exact path='/checkout'>
+        </Route>
+        <Route exact path='/checkout'>
           <CheckoutPage />
-        </Route> */}
+        </Route>
         {/* <Route exact path='/admin'>
           <AdminPage />
         </Route> */}
