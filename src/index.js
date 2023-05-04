@@ -19,9 +19,17 @@ const pizzaReducer = (state=[], action) => {
 const shoppingCart = (state=[], action) => {
   if (action.type === 'ADD_TO_CART') {
     const newPizza = action.payload;
-    const copyOfState = state;
-    copyOfState.push(newPizza);
-    return copyOfState;
+    // let newState = (state, newPizza) => {
+    //   let newStateArray = []
+    //   for (thing of state) {
+    //     newStateArray.push(thing)
+    //   }
+    //   newStateArray.push(newPizza);
+
+    //   return newStateArray;
+    // };
+    // return newState;
+    return [...state, newPizza];
   }
   if (action.type === 'REMOVE_FROM_CART') {
     const pizzaToRemove = action.payload;
@@ -33,10 +41,20 @@ const shoppingCart = (state=[], action) => {
   return state;
 }
 
+const customerInformation = (state = [], action) => {
+    if(action.type === 'ADD_CUSTOMER_INFORMATION'){
+     const newCustomer = action.payload;
+
+     return [...state, newCustomer];
+    }
+    return state;
+}
+
 const theStore = createStore(
     combineReducers({
       pizzaReducer,
-      shoppingCart
+      shoppingCart,
+      customerInformation
     }),
     applyMiddleware(
       logger
@@ -51,3 +69,16 @@ root.render(
         </Provider>
     </React.StrictMode>
 );
+
+
+// let var1 = "hello";
+
+// let var2 = var1;
+
+// console.log(var2);
+
+// let var3 = [1, 2, 3];
+
+// let var4 = var3;
+
+// console.log(var4);

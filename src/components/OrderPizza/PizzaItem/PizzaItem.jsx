@@ -39,8 +39,10 @@ function PizzaItem({pizza}) {
     <div className="pizza-card">
       <img src={pizza.image_path}  className='pizza-image'/>
       <h3 className="pizza-names">{pizza.name}</h3>
-      <p className='small-text'>{pizza.description}</p>
-      <h4 className='card-price'>{pizza.price}</h4>
+      <div className="light-blue-background">
+        <p className='small-text'>{pizza.description}</p>
+        <h4 className='card-price'>{pizza.price}</h4>
+      </div>
       {addOrRemoveButton()}
     </div>
   )

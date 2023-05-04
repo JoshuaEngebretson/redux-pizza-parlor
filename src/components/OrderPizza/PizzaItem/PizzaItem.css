@@ -1,8 +1,8 @@
 .pizza-card {
   display: inline-block;
   border: 1px solid black;
-  border-radius: 5%;
-  padding: 20px;
+  /* border-radius: 5%; */
+  /* padding: 20px; */
   margin: 15px;
   height: 400px;
   width: 300px;
@@ -10,31 +10,39 @@
 }
 
 .pizza-image {
-  height: 150px;
+  width: 300px;
   margin: auto;
 }
 
 .pizza-names {
-  height: 30px;
-  margin-bottom: 25px;
+  height: 10px;
+  margin-top: 5px;
 }
 
 .small-text {
   font-size: 14px;
-  height: 75px;
+  height: 70px;
   width: 275px;
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .card-price {
+  margin-top: 15px;
+  margin-bottom: 5px;
   text-align: right;
 }
 
 .pizza-button {
-  background-color: blue;
-  color: white;
+  /* background-color: blue; */
+  /* color: white; */
   font-size: xx-large;
   width: 300px;
   height: 40px;
   text-align: center;
+}
+
+.light-blue-background {
+  background-color: lightblue;
+  padding-left: 4%;
 }

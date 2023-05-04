@@ -9,7 +9,7 @@
     - Add this to redux cart state
   - [X] Remove pizza from cart
     - Remove this from redux cart state
-  - [ ] As pizzas added / removed keep running total in upper right
+  - [ ? ] As pizzas added / removed keep running total in upper right
 
 - [ ] Order - Enter Customer Information
   - located at '/customerInformation'

@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import OrderPizza from '../OrderPizza/OrderPizza';
 import { useEffect } from 'react';
+import CustomerInformationPage from '../CustomerInformationPage/CustomerInformationPage';
 
 function App() {
 
@@ -29,9 +30,9 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Prime Pizza</h1>
-      </header>
+        <header className='App-header'>
+            <h1 className='App-title'>Prime Pizza</h1>
+        </header>
       {/* <img src='images/pizza_photo.png' /> */}
       <p>Pizza is great.</p>
       <Router>
