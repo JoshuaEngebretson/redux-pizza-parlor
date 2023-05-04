@@ -16,9 +16,27 @@ const pizzaReducer = (state=[], action) => {
     return state;
 }
 
+const shoppingCart = (state=[], action) => {
+  if (action.type === 'ADD_TO_CART') {
+    const newPizza = action.payload;
+    const copyOfState = state;
+    copyOfState.push(newPizza);
+    return copyOfState;
+  }
+  if (action.type === 'REMOVE_FROM_CART') {
+    const pizzaToRemove = action.payload;
+    // copyOfState should be equal to the array when 
+    //  it doesn't include pizzaToRemove
+    const copyOfState = state.filter(pizza => pizza != pizzaToRemove);
+    return copyOfState;
+  }
+  return state;
+}
+
 const theStore = createStore(
     combineReducers({
-      pizzaReducer
+      pizzaReducer,
+      shoppingCart
     }),
     applyMiddleware(
       logger
