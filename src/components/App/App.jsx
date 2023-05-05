@@ -1,11 +1,12 @@
-import React from 'react';
-import axios from 'axios';
 import './App.css';
-import { useDispatch } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import OrderPizza from '../OrderPizza/OrderPizza';
+import React from 'react';
 import { useEffect } from 'react';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import OrderPizza from '../OrderPizza/OrderPizza';
 import CustomerInformationPage from '../CustomerInformationPage/CustomerInformationPage';
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 
 function App() {
 
@@ -42,9 +43,9 @@ function App() {
         <Route exact path='/customerInformation'>
           <CustomerInformationPage />
         </Route>
-        {/* <Route exact path='/checkout'>
+        <Route exact path='/checkout'>
           <CheckoutPage />
-        </Route> */}
+        </Route>
         {/* <Route exact path='/admin'>
           <AdminPage />
         </Route> */}

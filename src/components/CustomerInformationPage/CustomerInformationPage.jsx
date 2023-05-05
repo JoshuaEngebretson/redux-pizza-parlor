@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from "react-router-dom";
+import HeaderWithCart from '../OrderPizza/HeaderWithCart/HeaderWithCart';
 
 function CustomerInformationPage() {
 
@@ -50,7 +51,7 @@ function CustomerInformationPage() {
 
     return (
         <>
-        {/* <HeaderWithCart /> */}
+        <HeaderWithCart />
             <h3>Step 2: Customer Information</h3>
             <form>
                 <input
