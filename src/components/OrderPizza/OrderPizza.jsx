@@ -1,10 +1,7 @@
 import { useSelector } from "react-redux";
 import PizzaItem from "./PizzaItem/PizzaItem";
 import { useHistory } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import HeaderWithCart from "./HeaderWithCart/HeaderWithCart";
->>>>>>> main
 
 function OrderPizza() {
 
@@ -12,23 +9,13 @@ function OrderPizza() {
   console.log('pizzaArray inside of OrderPizza', pizzaArray);
 
   const history = useHistory();
-<<<<<<< HEAD
-
-  const customerInfoPage = () => {
-    history.push("/customerInformation")
-  }
-=======
->>>>>>> main
 
   const customerInfoPage = () => {
     history.push("/customerInformation")
   }
   return (
     <>
-<<<<<<< HEAD
-=======
       <HeaderWithCart />
->>>>>>> main
       <div className="pizza-container">
         {
           pizzaArray.map((pizza) => {

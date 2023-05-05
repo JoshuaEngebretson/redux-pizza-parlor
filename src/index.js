@@ -41,7 +41,6 @@ const shoppingCart = (state = [], action) => {
   return state;
 }
 
-<<<<<<< HEAD
 const custInfoReducer = (state = [], action) => {
   if (action.type === 'NEW_CUSTOMER_INFORMATION') {
     const customerObj = action.payload;
@@ -61,25 +60,6 @@ const theStore = createStore(
   }),
   applyMiddleware(
     logger
-=======
-const customerInformation = (state = '', action) => {
-    if(action.type === 'ADD_CUSTOMER_INFORMATION'){
-      const newCustomer = action.payload;
-      return newCustomer;
-    }
-    return state;
-}
-
-const theStore = createStore(
-    combineReducers({
-      pizzaReducer,
-      shoppingCart,
-      customerInformation
-    }),
-    applyMiddleware(
-      logger
-    )
->>>>>>> main
   )
 )
 
