@@ -41,9 +41,23 @@ const shoppingCart = (state=[], action) => {
   return state;
 }
 
-const customerInformation = (state = '', action) => {
-    if(action.type === 'ADD_CUSTOMER_INFORMATION'){
-      const newCustomer = action.payload;
+const customerAddress = {
+  customer_name: "",
+  street_address: "",
+  city: "",
+  zip: "",
+  type: ""
+}
+
+const customerInformation = (state = customerAddress, action) => {
+    if(action.type === 'NEW_CUSTOMER_INFORMATON'){
+      const newCustomer = {
+        customer_name: action.payload.customer_name,
+        street_address: action.payload.street_address,
+        city: action.payload.city,
+        zip: action.payload.zip,
+        type: action.payload.type
+      };
       return newCustomer;
     }
     return state;

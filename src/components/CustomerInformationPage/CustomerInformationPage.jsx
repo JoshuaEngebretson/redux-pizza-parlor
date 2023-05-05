@@ -7,10 +7,6 @@ function CustomerInformationPage() {
 
     const history = useHistory();
 
-    const checkoutPage = () => {
-        history.push("/checkout")
-    }
-
     const shoppingCart = useSelector(state => state.shoppingCart);
 
     const [nameInput, setNameInput] = useState('');
@@ -19,38 +15,21 @@ function CustomerInformationPage() {
     const [zipInput, setzipInput] = useState('');
     const [pickupOption, setPickupOption] = useState('')
 
+    const dispatch = useDispatch();
 
-    const newCustomer = (event) => {
-        event.preventDefault();
-
-        const dispatch = useDispatch();
-
-        axios({
-            method: 'POST',
-            url: '/api/order',
-            data: {
-                name: nameInput,
-                address: addressInput,
-                city: cityInput,
-                zip: zipInput,
-                type: pickupOption,
-                pizzas: shoppingCart
-            }
-        }).then((response) =>
-
-            dispatch({
-                type: 'NEW_CUSTOMER_INFORMATON',
-                payload: {
-                    nameInput,
-                    addressInput,
-                    cityInput,
-                    zipInput
-                }
-            }).catch((error) => {
-                console.log('Customer Information issue', error);
-            })
-
-        )
+    const newCustomer = () => {
+        const currentCustomer = {
+            customer_name: nameInput,
+            street_address: addressInput,
+            city: cityInput,
+            zip: zipInput,
+            type: pickupOption
+        }
+        dispatch({
+            type: 'NEW_CUSTOMER_INFORMATON',
+            payload: currentCustomer
+        })
+        history.push("/checkout")
     }
 
     const handleSetNameInput = event => {
@@ -73,7 +52,7 @@ function CustomerInformationPage() {
         <>
         {/* <HeaderWithCart /> */}
             <h3>Step 2: Customer Information</h3>
-            <form onSubmit={newCustomer}>
+            <form>
                 <input
                     placeholder='Name'
                     type='text'
@@ -98,12 +77,14 @@ function CustomerInformationPage() {
                     value={zipInput}
                     onChange={handleZipInput}
                 />
+                <label for="Pickup">Pickup</label>
                 <input
                     type='radio'
                     value='Pickup'
                     name='getPizza'
                     onChange={handleRadio}
                 />
+                <label for="Delivery">Delivery</label>
                 <input
                     type='radio'
                     value='Delivery'
@@ -112,7 +93,7 @@ function CustomerInformationPage() {
                 />
             </form>
             <footer className="footer-button">
-                <button className="next-button" onClick={checkoutPage} >next</button>
+                <button className="next-button" onClick={newCustomer}>next</button>
             </footer>
         </>
     )

@@ -10,12 +10,14 @@
   - [X] Remove pizza from cart
     - Remove this from redux cart state
   - [ ? ] As pizzas added / removed keep running total in upper right
+  - [ ] Input validation before Next button can be clicked (ensure pizza in cart)
 
 - [ ] Order - Enter Customer Information
   - located at '/customerInformation'
-  - [ ] state in app for Name, Street Address, City, Zip
+  - [X] state in app for Name, Street Address, City, Zip
   - [ ] onClick for Next button will set state in redux 
   - [ ] radio button for Pickup / Delivery
+  - [ ] Input validation before moving forward to checkout (ensure all fields are completed)
 
 - [ ] Order - Checkout
   - located at /checkout

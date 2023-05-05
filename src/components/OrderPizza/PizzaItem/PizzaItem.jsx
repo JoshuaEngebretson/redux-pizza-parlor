@@ -8,7 +8,7 @@ function PizzaItem({pizza}) {
   const dispatch = useDispatch();
 
   const addToCart = () => {
-    console.log(`this button will add ${pizza.name} to the redux cart`);
+    // console.log(`this button will add ${pizza.name} to the redux cart`);
     dispatch({
       type: 'ADD_TO_CART',
       payload: pizza
@@ -17,7 +17,7 @@ function PizzaItem({pizza}) {
   }
 
   const removeFromCart = () => {
-    console.log(`this button will remove ${pizza.name} from the redux cart`);
+    // console.log(`this button will remove ${pizza.name} from the redux cart`);
     dispatch({
       type: 'REMOVE_FROM_CART',
       payload: pizza
