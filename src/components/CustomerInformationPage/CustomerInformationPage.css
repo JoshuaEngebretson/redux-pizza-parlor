@@ -1,0 +1,6 @@
+.red-background{
+  border: 1px solid #f9002ed2;
+}
+.red-background::placeholder{
+  color: red
+}

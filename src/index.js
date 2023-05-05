@@ -38,6 +38,9 @@ const shoppingCart = (state=[], action) => {
     const copyOfState = state.filter(pizza => pizza != pizzaToRemove);
     return copyOfState;
   }
+  if(action.type === 'RESET_SHOPPING_CART') {
+    return state = [];
+  }
   return state;
 }
 
@@ -59,6 +62,9 @@ const customerInformation = (state = customerAddress, action) => {
         type: action.payload.type
       };
       return newCustomer;
+    }
+    if(action.type === 'RESET_CUSTOMER_INFORMATION'){
+      return state = customerAddress;
     }
     return state;
 }
